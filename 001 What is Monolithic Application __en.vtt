@@ -1,0 +1,229 @@
+WEBVTT
+
+00:00.610 --> 00:03.190
+Hello and welcome back.
+
+00:03.760 --> 00:09.820
+Before we jump to micro services, let's first understand what is monolithic application.
+
+00:10.960 --> 00:17.260
+Maybe you are aware of monolithic application or it may be possible that you are working on the application,
+
+00:17.260 --> 00:21.970
+which is monolithic, but you don't know that this is called a monolithic.
+
+00:23.400 --> 00:28.290
+Now, here to understand this, let's take the example of a university application.
+
+00:29.270 --> 00:33.090
+So in this application, we can have different components, like for the university.
+
+00:33.290 --> 00:39.890
+We have students and certain details like address or the subjects that the student is learning and the
+
+00:39.890 --> 00:47.270
+how different faculties in the university like commerce, arts, engineering, medical, pharmacy and
+
+00:47.270 --> 00:47.900
+many more.
+
+00:49.380 --> 00:55.800
+For the university, we have professors and we also have non-academic staff as well with doing office
+
+00:55.800 --> 01:03.450
+work and for the university we have online examination portal by which university is taking the online
+
+01:03.450 --> 01:04.140
+examination.
+
+01:04.470 --> 01:11.250
+And we have one result component by which university is providing results to the students across all
+
+01:11.250 --> 01:12.030
+the faculties.
+
+01:13.390 --> 01:19.240
+There are more components also possible like liability and any other, but here, let's concentrate
+
+01:19.240 --> 01:22.360
+on these six components for this particular example.
+
+01:23.440 --> 01:29.590
+So this all six components or whatever, you have twenty or twenty five, if you have all these components
+
+01:29.590 --> 01:33.990
+in the single application, then it is called this monolithic application.
+
+01:34.810 --> 01:38.110
+So all the components in a single spring would application.
+
+01:38.140 --> 01:40.960
+You can say that it is monolithic application.
+
+01:41.200 --> 01:42.570
+Now, this is gender term.
+
+01:42.970 --> 01:48.910
+So here I am taking example of Springwood because this course is all about micro services with springboard
+
+01:48.910 --> 01:49.720
+and spinning cloud.
+
+01:49.720 --> 01:55.720
+But this is applicable to any of the programming languages and any of the web frameworks that you are
+
+01:55.720 --> 01:56.140
+using.
+
+01:57.630 --> 02:01.350
+Now, let's talk about the drawbacks of the monolithic application.
+
+02:02.390 --> 02:09.260
+The first is called complexity, as you have just one single application, you will have a lot of packages,
+
+02:09.260 --> 02:12.110
+controllers and entity classes inside that.
+
+02:13.010 --> 02:18.710
+So as a developer, it will be very hard to go through all the thousands lines of code and different
+
+02:18.710 --> 02:19.330
+packages.
+
+02:19.730 --> 02:24.380
+And another thing is, say, for example, you have a slight change in one component.
+
+02:24.560 --> 02:26.480
+For example, in result component.
+
+02:26.690 --> 02:33.440
+Then you need to test complete application because you have all the components in just one Springwood
+
+02:33.440 --> 02:33.980
+application.
+
+02:34.160 --> 02:35.990
+Now, here we just have six.
+
+02:36.350 --> 02:43.070
+But when you have actual application in hand, you might be having 20, 50 or 100 components within
+
+02:43.070 --> 02:44.650
+the same Springwood application.
+
+02:45.500 --> 02:49.010
+So as a developer, it is very hard to understand the business logic.
+
+02:50.140 --> 02:53.660
+The next is tight coupling between the different components.
+
+02:54.080 --> 03:00.130
+So, for example, if your application is down, then none of your components will be accessible by
+
+03:00.130 --> 03:00.950
+the end user.
+
+03:01.210 --> 03:05.170
+So, for example, your application is down, then student registration is going on.
+
+03:05.180 --> 03:11.410
+That will be also down if some faculty work is going on, on the examination portal or result, that
+
+03:11.410 --> 03:16.270
+will not be accessible because you have all the things in just one application.
+
+03:16.390 --> 03:20.090
+You cannot access other components while your application is down.
+
+03:20.740 --> 03:23.860
+So that is tight coupling between your components.
+
+03:25.040 --> 03:26.630
+The authorities scalability.
+
+03:27.080 --> 03:33.530
+So when the academic year starts, right, you have usurers, for example, huge traffic for the student
+
+03:33.530 --> 03:39.080
+registration and your examination and research portal doesn't have that much traffic at that time.
+
+03:39.920 --> 03:42.780
+So obviously, you need to increase the competition power.
+
+03:42.800 --> 03:47.270
+Basically, you need to upgrade the server or you need to scale your application.
+
+03:47.300 --> 03:52.670
+You need to have more instances for your Springwood application to handle that traffic for the student
+
+03:52.670 --> 03:53.340
+registration.
+
+03:54.170 --> 03:59.990
+So increasing the competition power or increasing the number of instances is basically cost.
+
+04:00.320 --> 04:01.750
+You are going to pay for that.
+
+04:02.000 --> 04:05.780
+Now, the same happens when you have examinees and for the university, right?
+
+04:06.020 --> 04:09.470
+Lot of students are giving the examinees and at the same time.
+
+04:09.650 --> 04:14.840
+So your server need to handle that much traffic, otherwise it will be trouble for you.
+
+04:15.440 --> 04:20.330
+Now, at the time, your registration portal and reserve portal doesn't have that much traffic.
+
+04:21.160 --> 04:27.820
+Same applies when universities giving out the results, your citizen portal and examination portal doesn't
+
+04:27.820 --> 04:33.850
+have that much topic, just the result portal is having huge traffic because all the students are taking
+
+04:33.850 --> 04:36.100
+the results online on your portal.
+
+04:37.380 --> 04:44.430
+So what happens at a time one or four or five components are having huge topic and another 20 50 components
+
+04:44.430 --> 04:49.160
+doesn't have that much topic, but still you need to scale up all the components.
+
+04:49.170 --> 04:49.500
+Why?
+
+04:49.860 --> 04:53.620
+Because you have all the components within the same spring board application.
+
+04:53.850 --> 04:58.910
+You don't have luxury to just kill one particular component and not others.
+
+05:00.080 --> 05:06.750
+Say you have 20 components in your monolithic application, but just one component is having you topic,
+
+05:06.980 --> 05:09.490
+then us getting the complete application.
+
+05:09.510 --> 05:16.010
+So other 19 components, you don't require much competition, but still you are scaling up your application.
+
+05:16.400 --> 05:19.400
+And that's the drawback with monolithic application.
+
+05:20.690 --> 05:25.790
+So this is the monolithic application and these are the drawbacks with the monolithic application.
+
+05:26.880 --> 05:32.610
+Now, in the next lecture, we will see what is microcircuits and how it is resolving these drawbacks
+
+05:32.610 --> 05:34.410
+of the monolithic application.
+
+05:35.100 --> 05:39.480
+So that's all for now, will proceed further in the next lecture.
+
+05:40.080 --> 05:40.950
+Thank you very much.
